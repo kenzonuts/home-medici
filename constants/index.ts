@@ -9,6 +9,16 @@ export type {
   VisionMissionItem,
 } from "./about";
 export { CONTACT, getWhatsAppUrl } from "./contact";
+export { galleryContent } from "./gallery";
+export type {
+  EnvironmentFeature,
+  FacilityHighlight,
+  GalleryBreadcrumb,
+  GalleryCategory,
+  GalleryCategoryId,
+  GalleryItem as GalleryPageItem,
+  GalleryStat,
+} from "./gallery";
 export { homepageContent } from "./homepage";
 export type {
   ArticlePreview,
