@@ -43,7 +43,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
         <>
           <motion.div
             key="mobile-nav-overlay"
-            className="fixed inset-0 z-overlay bg-foreground/40 backdrop-blur-sm lg:hidden"
+            className="z-overlay fixed inset-0 bg-foreground/40 backdrop-blur-sm lg:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -57,7 +57,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
             role="dialog"
             aria-modal="true"
             aria-labelledby={titleId}
-            className="fixed inset-y-0 right-0 z-modal flex w-[min(100%,20rem)] flex-col bg-surface shadow-xl lg:hidden"
+            className="z-modal fixed inset-y-0 right-0 flex w-[min(100%,20rem)] flex-col bg-surface shadow-xl lg:hidden"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -72,7 +72,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
                 ref={closeRef}
                 type="button"
                 onClick={onClose}
-                className="inline-flex size-10 items-center justify-center rounded-lg text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="inline-flex size-10 items-center justify-center rounded-lg text-foreground transition-colors hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                 aria-label="Tutup menu"
               >
                 <X className="size-5" aria-hidden />

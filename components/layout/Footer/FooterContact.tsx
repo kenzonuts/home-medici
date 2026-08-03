@@ -20,7 +20,7 @@ export function FooterContact({ className }: FooterContactProps) {
             href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-start gap-2 transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="inline-flex items-start gap-2 transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
           >
             <MessageCircle className="mt-0.5 size-4 shrink-0" aria-hidden />
             <span>WhatsApp</span>
@@ -29,7 +29,7 @@ export function FooterContact({ className }: FooterContactProps) {
         <li>
           <a
             href={CONTACT.emailHref}
-            className="inline-flex items-start gap-2 transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="inline-flex items-start gap-2 transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
           >
             <Mail className="mt-0.5 size-4 shrink-0" aria-hidden />
             <span>{CONTACT.email}</span>
@@ -38,7 +38,7 @@ export function FooterContact({ className }: FooterContactProps) {
         <li>
           <a
             href={CONTACT.phoneHref}
-            className="inline-flex items-start gap-2 transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="inline-flex items-start gap-2 transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
           >
             <Phone className="mt-0.5 size-4 shrink-0" aria-hidden />
             <span>{CONTACT.phoneDisplay}</span>

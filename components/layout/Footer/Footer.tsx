@@ -1,24 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Facebook, Instagram, Youtube } from "lucide-react";
 import Link from "next/link";
 import { type ReactNode } from "react";
 
+import { fadeUp } from "@/components/animations/variants";
 import { FooterContact } from "@/components/layout/Footer/FooterContact";
 import { FooterLinks } from "@/components/layout/Footer/FooterLinks";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  YoutubeIcon,
+} from "@/components/layout/Footer/SocialIcons";
 import { Logo } from "@/components/layout/Logo";
 import { Container } from "@/components/ui/Container";
 import { Divider } from "@/components/ui/Divider";
 import { SITE_DESCRIPTION, SITE_NAME } from "@/constants/site";
 import { socialLinks } from "@/constants/social";
-import { fadeUp } from "@/components/animations/variants";
 import { cn } from "@/lib/utils";
 
 const socialIconMap = {
-  instagram: Instagram,
-  facebook: Facebook,
-  youtube: Youtube,
+  instagram: InstagramIcon,
+  facebook: FacebookIcon,
+  youtube: YoutubeIcon,
 } as const;
 
 function SocialLinks({ className }: { className?: string }) {
@@ -40,7 +44,7 @@ function SocialLinks({ className }: { className?: string }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="inline-flex size-10 items-center justify-center rounded-lg border border-border bg-surface text-muted-foreground transition-colors hover:border-primary/30 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  className="inline-flex size-10 items-center justify-center rounded-lg border border-border bg-surface text-muted-foreground transition-colors hover:border-primary/30 hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                 >
                   <Icon className="size-4" aria-hidden />
                 </Link>
@@ -102,7 +106,7 @@ function BackToTopLink(): ReactNode {
     <button
       type="button"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="font-heading text-sm font-semibold text-primary transition-colors hover:text-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      className="font-heading text-sm font-semibold text-primary transition-colors hover:text-primary-hover focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
     >
       Kembali ke atas
     </button>

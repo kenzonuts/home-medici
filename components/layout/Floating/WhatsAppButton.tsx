@@ -15,7 +15,7 @@ export function WhatsAppButton({ className }: WhatsAppButtonProps) {
   return (
     <motion.div
       className={cn(
-        "fixed right-4 bottom-4 z-fixed sm:right-6 sm:bottom-6",
+        "z-fixed fixed right-4 bottom-4 sm:right-6 sm:bottom-6",
         className,
       )}
       initial={{ opacity: 0, scale: 0.8 }}
@@ -31,7 +31,7 @@ export function WhatsAppButton({ className }: WhatsAppButtonProps) {
           "group relative inline-flex size-14 items-center justify-center rounded-full",
           "bg-[#25D366] text-white shadow-lg",
           "transition-transform duration-200 hover:scale-110 hover:shadow-xl",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+          "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none",
         )}
       >
         <span

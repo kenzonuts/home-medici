@@ -31,10 +31,10 @@ export function ScrollTopButton({
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="Kembali ke atas"
           className={cn(
-            "fixed right-4 bottom-20 z-fixed inline-flex size-11 items-center justify-center rounded-full",
+            "z-fixed fixed right-4 bottom-20 inline-flex size-11 items-center justify-center rounded-full",
             "border border-border bg-surface text-foreground shadow-md sm:right-6 sm:bottom-24",
             "transition-colors hover:border-primary/30 hover:text-primary",
-            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+            "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none",
             className,
           )}
         >

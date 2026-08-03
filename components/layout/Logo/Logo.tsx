@@ -24,7 +24,7 @@ export function Logo({
       href={href}
       aria-label={`${SITE_NAME} — beranda`}
       className={cn(
-        "font-heading inline-flex items-center gap-2 font-bold tracking-tight text-foreground transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+        "inline-flex items-center gap-2 font-heading font-bold tracking-tight text-foreground transition-opacity hover:opacity-80 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none",
         className,
       )}
       {...props}

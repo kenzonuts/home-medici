@@ -18,7 +18,7 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          "sticky top-0 z-sticky w-full transition-all duration-300",
+          "z-sticky sticky top-0 w-full transition-all duration-300",
           scrolled
             ? "border-b border-border/80 bg-surface/95 shadow-sm backdrop-blur-md"
             : "border-b border-transparent bg-transparent",
@@ -31,7 +31,7 @@ export function Navbar() {
 
           <button
             type="button"
-            className="inline-flex size-10 items-center justify-center rounded-lg text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-lg text-foreground transition-colors hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none lg:hidden"
             aria-label="Buka menu navigasi"
             aria-expanded={mobileOpen}
             aria-controls="mobile-navigation"

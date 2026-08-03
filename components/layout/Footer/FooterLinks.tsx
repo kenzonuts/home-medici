@@ -10,7 +10,10 @@ export type FooterLinksProps = {
 
 export function FooterLinks({ className, onNavigate }: FooterLinksProps) {
   return (
-    <nav aria-label="Navigasi cepat" className={cn("flex flex-col gap-3", className)}>
+    <nav
+      aria-label="Navigasi cepat"
+      className={cn("flex flex-col gap-3", className)}
+    >
       <p className="font-heading text-sm font-bold text-surface-foreground">
         Navigasi
       </p>
@@ -20,7 +23,7 @@ export function FooterLinks({ className, onNavigate }: FooterLinksProps) {
             <Link
               href={item.href}
               onClick={onNavigate}
-              className="text-sm text-muted-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="text-sm text-muted-foreground transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
             >
               {item.label}
             </Link>

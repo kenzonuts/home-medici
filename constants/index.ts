@@ -1,9 +1,4 @@
-export {
-  SITE_DESCRIPTION,
-  SITE_LOCALE,
-  SITE_NAME,
-  SITE_URL,
-} from "./site";
+export { SITE_DESCRIPTION, SITE_LOCALE, SITE_NAME, SITE_URL } from "./site";
 export { CONTACT, getWhatsAppUrl } from "./contact";
 export { footerNavigation, mainNavigation } from "./navigation";
 export type { NavItem } from "./navigation";

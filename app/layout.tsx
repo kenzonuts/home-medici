@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { PageLayout } from "@/components/layout/PageLayout";
 import { SITE_LOCALE } from "@/constants/site";
 import { inter, manrope } from "@/lib/fonts";
 import { defaultMetadata } from "@/lib/metadata";
@@ -17,7 +18,7 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} ${inter.variable} font-body antialiased`}
       >
-        {children}
+        <PageLayout>{children}</PageLayout>
       </body>
     </html>
   );

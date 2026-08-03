@@ -33,10 +33,8 @@ export function NavLink({
       onClick={onNavigate}
       className={cn(
         "relative font-heading text-sm font-semibold tracking-tight transition-colors duration-200",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-        active
-          ? "text-primary"
-          : "text-foreground/80 hover:text-primary",
+        "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none",
+        active ? "text-primary" : "text-foreground/80 hover:text-primary",
         className,
       )}
       {...props}
