@@ -6,12 +6,7 @@ import { SITE_NAME, SITE_URL } from "@/constants/site";
 export type ArticleBreadcrumb = BreadcrumbItem;
 
 export type ArticleCategoryId =
-  | "all"
-  | "sunat"
-  | "anak"
-  | "kesehatan"
-  | "pengobatan"
-  | "tips";
+  "all" | "sunat" | "anak" | "kesehatan" | "pengobatan" | "tips";
 
 export type ArticleCategory = {
   id: ArticleCategoryId;
@@ -324,9 +319,11 @@ export function getArticleBySlug(slug: string): Article | undefined {
 
 export function getArticleToc(article: Article): TocItem[] {
   return article.content
-    .filter((block): block is Extract<ArticleContentBlock, { type: "heading" }> => {
-      return block.type === "heading";
-    })
+    .filter(
+      (block): block is Extract<ArticleContentBlock, { type: "heading" }> => {
+        return block.type === "heading";
+      },
+    )
     .map((heading) => ({
       id: heading.id,
       title: heading.text,
@@ -342,7 +339,9 @@ export function getRelatedArticles(article: Article): ArticleSummary[] {
 
   return [...sameCategory, ...fallback]
     .filter((item, index, list) => {
-      return list.findIndex((candidate) => candidate.slug === item.slug) === index;
+      return (
+        list.findIndex((candidate) => candidate.slug === item.slug) === index
+      );
     })
     .slice(0, 4);
 }

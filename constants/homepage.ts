@@ -229,28 +229,28 @@ export const homepageContent = {
     description:
       "Informasi ringkas seputar persiapan, perawatan, dan pemulihan.",
     ctaLabel: "Lihat Semua Artikel",
-    ctaHref: "/artikel",
+    ctaHref: "/articles",
     items: [
       {
         id: "a-1",
         title: "Persiapan Sebelum Sunat",
         category: "Edukasi",
         publishedAt: "2026-01-15",
-        href: "/artikel",
+        href: "/articles/panduan-placeholder-sunat-modern",
       },
       {
         id: "a-2",
         title: "Perawatan Setelah Prosedur",
         category: "Perawatan",
         publishedAt: "2026-02-02",
-        href: "/artikel",
+        href: "/articles/tips-placeholder-perawatan-di-rumah",
       },
       {
         id: "a-3",
         title: "Tips Menjaga Kenyamanan Anak",
         category: "Tips",
         publishedAt: "2026-03-10",
-        href: "/artikel",
+        href: "/articles/tips-placeholder-kunjungan-anak",
       },
     ] satisfies ArticlePreview[],
   },
