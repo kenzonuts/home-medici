@@ -30,6 +30,14 @@ export type {
   ServiceIconKey,
   ServiceItem,
 } from "./services";
+export { teamContent } from "./team";
+export type {
+  ExpertiseArea,
+  QualificationItem,
+  TeamBreadcrumb,
+  TeamDoctor,
+  TeamTrustItem,
+} from "./team";
 export { SITE_DESCRIPTION, SITE_LOCALE, SITE_NAME, SITE_URL } from "./site";
 export { socialLinks } from "./social";
 export type { SocialLink } from "./social";
