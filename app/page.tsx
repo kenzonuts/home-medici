@@ -1,7 +1,27 @@
-/**
- * Route entry placeholder.
- * Page UI and sections will be implemented in a later phase.
- */
+import {
+  ArticlesPreview,
+  BookingSection,
+  ClinicLocation,
+  GalleryPreview,
+  HeroSection,
+  MedicalTeamPreview,
+  ServicesPreview,
+  Testimonials,
+  WhyChooseUs,
+} from "@/components/sections/home";
+
 export default function HomePage() {
-  return null;
+  return (
+    <>
+      <HeroSection />
+      <ServicesPreview />
+      <WhyChooseUs />
+      <MedicalTeamPreview />
+      <GalleryPreview />
+      <Testimonials />
+      <ArticlesPreview />
+      <BookingSection />
+      <ClinicLocation />
+    </>
+  );
 }
