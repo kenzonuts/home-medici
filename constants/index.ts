@@ -21,6 +21,15 @@ export type {
 } from "./homepage";
 export { footerNavigation, mainNavigation } from "./navigation";
 export type { NavItem } from "./navigation";
+export { servicesContent } from "./services";
+export type {
+  BreadcrumbItem,
+  FaqItem,
+  ProcessStep,
+  ServiceAdvantage,
+  ServiceIconKey,
+  ServiceItem,
+} from "./services";
 export { SITE_DESCRIPTION, SITE_LOCALE, SITE_NAME, SITE_URL } from "./site";
 export { socialLinks } from "./social";
 export type { SocialLink } from "./social";

@@ -1,0 +1,10 @@
+export { ServiceCardItem } from "./ServiceCardItem";
+export type { ServiceCardProps } from "./ServiceCardItem";
+export { ServiceHighlight } from "./ServiceHighlight";
+export type { ServiceHighlightProps } from "./ServiceHighlight";
+export { ServicesBookingCta } from "./ServicesBookingCta";
+export { ServicesFaq } from "./ServicesFaq";
+export { ServicesGrid } from "./ServicesGrid";
+export { ServicesIntroduction } from "./ServicesIntroduction";
+export { TreatmentProcess } from "./TreatmentProcess";
+export { WhyChooseServices } from "./WhyChooseServices";

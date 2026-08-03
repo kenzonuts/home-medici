@@ -2,13 +2,13 @@ import { FadeUp } from "@/components/animations";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { Container } from "@/components/ui/Container";
 import { HeadingXL, Paragraph } from "@/components/ui/Typography";
-import type { AboutBreadcrumb } from "@/constants/about";
+import type { BreadcrumbItem } from "@/constants/services";
 import { cn } from "@/lib/utils";
 
 export type PageHeaderProps = {
   title: string;
   description: string;
-  breadcrumbs: readonly AboutBreadcrumb[];
+  breadcrumbs: readonly BreadcrumbItem[];
   className?: string;
 };
 

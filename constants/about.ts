@@ -1,7 +1,6 @@
-export type AboutBreadcrumb = {
-  label: string;
-  href?: string;
-};
+import type { BreadcrumbItem } from "@/constants/services";
+
+export type AboutBreadcrumb = BreadcrumbItem;
 
 export type StoryMilestone = {
   id: string;

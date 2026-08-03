@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
-import type { AboutBreadcrumb } from "@/constants/about";
+import type { BreadcrumbItem } from "@/constants/services";
 import { cn } from "@/lib/utils";
 
 export type BreadcrumbProps = {
-  items: readonly AboutBreadcrumb[];
+  items: readonly BreadcrumbItem[];
   className?: string;
 };
 
