@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-import { Container } from "@/components/layout";
 import { SITE_LOCALE } from "@/constants/site";
 import { inter, manrope } from "@/lib/fonts";
 import { defaultMetadata } from "@/lib/metadata";
@@ -18,7 +17,7 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} ${inter.variable} font-body antialiased`}
       >
-        <Container className="min-h-dvh">{children}</Container>
+        {children}
       </body>
     </html>
   );
