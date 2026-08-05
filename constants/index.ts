@@ -28,7 +28,15 @@ export type {
   PaginationItem,
   TocItem,
 } from "./articles";
-export { CONTACT, getWhatsAppUrl } from "./contact";
+export { CONTACT, contactContent, getWhatsAppUrl } from "./contact";
+export type {
+  ContactActionType,
+  ContactBreadcrumb,
+  ContactCard,
+  ContactFaqItem,
+  ContactIconKey,
+  ContactSocialCard,
+} from "./contact";
 export { galleryContent } from "./gallery";
 export type {
   EnvironmentFeature,

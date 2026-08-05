@@ -10,17 +10,14 @@ import {
   WhyChooseMedicalTeam,
 } from "@/components/sections/team";
 import { PageHeader } from "@/components/shared/PageHeader";
-import { SITE_NAME } from "@/constants/site";
 import { teamContent } from "@/constants/team";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tim Medis",
   description: teamContent.header.description,
-  openGraph: {
-    title: `Tim Medis | ${SITE_NAME}`,
-    description: teamContent.header.description,
-  },
-};
+  path: "/tim-medis",
+});
 
 export default function MedicalTeamPage() {
   const { header } = teamContent;

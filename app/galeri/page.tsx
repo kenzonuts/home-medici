@@ -10,16 +10,13 @@ import {
 } from "@/components/sections/gallery";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { galleryContent } from "@/constants/gallery";
-import { SITE_NAME } from "@/constants/site";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Galeri",
   description: galleryContent.header.description,
-  openGraph: {
-    title: `Galeri | ${SITE_NAME}`,
-    description: galleryContent.header.description,
-  },
-};
+  path: "/galeri",
+});
 
 export default function GalleryPage() {
   const { header } = galleryContent;

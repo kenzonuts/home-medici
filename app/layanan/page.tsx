@@ -11,16 +11,13 @@ import {
 } from "@/components/sections/services";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { servicesContent } from "@/constants/services";
-import { SITE_NAME } from "@/constants/site";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Layanan",
   description: servicesContent.header.description,
-  openGraph: {
-    title: `Layanan | ${SITE_NAME}`,
-    description: servicesContent.header.description,
-  },
-};
+  path: "/layanan",
+});
 
 export default function ServicesPage() {
   const { header } = servicesContent;
