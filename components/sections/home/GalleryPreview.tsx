@@ -1,6 +1,7 @@
+import Image from "next/image";
+
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/animations";
 import { Section } from "@/components/layout/Section";
-import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder";
 import { SectionCTA } from "@/components/shared/SectionCTA";
 import { GalleryCard } from "@/components/ui/Card";
 import { SectionTitle } from "@/components/ui/Typography";
@@ -33,12 +34,15 @@ export function GalleryPreview() {
             <GalleryCard
               className="transition-transform duration-200 hover:-translate-y-1"
               media={
-                <ImagePlaceholder
-                  label={item.label}
-                  imageSrc={item.imageSrc}
-                  aspect="none"
-                  className="absolute inset-0 h-full transition-transform duration-300 group-hover:scale-105"
-                />
+                item.imageSrc ? (
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.label}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 50vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                ) : undefined
               }
             />
           </StaggerItem>

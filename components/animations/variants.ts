@@ -72,11 +72,10 @@ export const zoom: Variants = {
   },
 };
 
-/** Parent container that staggers children. */
+/** Parent container that staggers children (no opacity hide — avoids stuck-invisible grids). */
 export const staggerContainer: Variants = {
-  hidden: { opacity: 0 },
+  hidden: {},
   visible: {
-    opacity: 1,
     transition: {
       staggerChildren: 0.1,
       delayChildren: 0.08,
