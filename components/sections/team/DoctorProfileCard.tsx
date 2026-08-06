@@ -21,6 +21,7 @@ export function DoctorProfileCard({ doctor }: DoctorProfileCardProps) {
       media={
         <ImagePlaceholder
           label={doctor.imageLabel}
+          imageSrc={doctor.imageSrc}
           aspect="portrait"
           className="rounded-none"
         />

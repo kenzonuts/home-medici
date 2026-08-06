@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ImageIcon } from "lucide-react";
 import { type HTMLAttributes } from "react";
 
@@ -5,6 +6,7 @@ import { cn } from "@/lib/utils";
 
 export type ImagePlaceholderProps = HTMLAttributes<HTMLDivElement> & {
   label: string;
+  imageSrc?: string;
   aspect?: "square" | "video" | "portrait" | "wide" | "hero" | "none";
 };
 
@@ -22,10 +24,31 @@ const aspectMap = {
  */
 export function ImagePlaceholder({
   label,
+  imageSrc,
   aspect = "video",
   className,
   ...props
 }: ImagePlaceholderProps) {
+  if (imageSrc) {
+    return (
+      <div
+        className={cn(
+          "relative w-full overflow-hidden bg-muted",
+          aspectMap[aspect],
+          className,
+        )}
+        {...props}
+      >
+        <Image
+          src={imageSrc}
+          alt={label}
+          fill
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       role="img"

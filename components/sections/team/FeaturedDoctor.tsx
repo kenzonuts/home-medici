@@ -32,6 +32,7 @@ export function FeaturedDoctor() {
           <FadeLeft className="min-h-full">
             <ImagePlaceholder
               label={featuredDoctor.imageLabel}
+              imageSrc={featuredDoctor.imageSrc}
               aspect="none"
               className="h-full min-h-[360px] rounded-none lg:min-h-[560px]"
             />

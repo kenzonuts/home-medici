@@ -11,6 +11,7 @@ export type TeamDoctor = {
   specialtyTags: readonly string[];
   schedule: string;
   imageLabel: string;
+  imageSrc?: string;
   ctaLabel: string;
   ctaMessage: string;
 };
@@ -66,9 +67,9 @@ export const teamContent = {
   },
   featuredDoctor: {
     eyebrow: "Dokter Utama",
-    name: "Nama Dokter Placeholder",
-    position: "Posisi Medis Placeholder",
-    bio: "Biografi singkat placeholder yang menjelaskan pengalaman dokter, pendekatan komunikasi, dan komitmen terhadap kenyamanan pasien.",
+    name: "Dr. Dokter 1",
+    position: "Dokter Umum",
+    bio: "Dokter berpengalaman yang telah menangani ribuan kasus sunat dengan pendekatan yang ramah, profesional, dan mengutamakan kenyamanan pasien serta keluarga.",
     expertise: [
       "Sunat bayi dan anak",
       "Konsultasi pra-tindakan",
@@ -76,10 +77,11 @@ export const teamContent = {
       "Edukasi keluarga",
     ],
     yearsExperience: "10+ Tahun Pengalaman",
-    imageLabel: "Foto dokter utama",
+    imageLabel: "Foto Dr. Dokter 1",
+    imageSrc: "/images/dr 1.png",
     ctaLabel: "Booking WhatsApp",
     ctaMessage:
-      "Halo Rumah Sunat Modern Jati, saya ingin booking konsultasi dengan dokter utama.",
+      "Halo Rumah Sunat Modern Jati, saya ingin booking konsultasi dengan Dr. Dokter 1.",
   },
   doctors: {
     eyebrow: "Daftar Tim",
@@ -89,42 +91,44 @@ export const teamContent = {
     items: [
       {
         id: "doctor-1",
-        name: "Nama Dokter Placeholder",
-        position: "Dokter Umum Placeholder",
-        bio: "Deskripsi singkat placeholder mengenai fokus layanan dan gaya konsultasi dokter.",
+        name: "Dr. Dokter 1",
+        position: "Dokter Umum",
+        bio: "Dokter berpengalaman yang fokus pada layanan sunat anak dengan pendekatan yang ramah dan profesional.",
         expertise: ["Sunat Anak", "Konsultasi"],
         specialtyTags: ["Anak", "Keluarga"],
-        schedule: "Jadwal praktik placeholder",
-        imageLabel: "Foto dokter placeholder 1",
+        schedule: "Senin - Sabtu, 08:00 - 16:00",
+        imageLabel: "Foto Dr. Dokter 1",
+        imageSrc: "/images/dr 1.png",
         ctaLabel: "Booking",
         ctaMessage:
-          "Halo Rumah Sunat Modern Jati, saya ingin booking dengan dokter placeholder 1.",
+          "Halo Rumah Sunat Modern Jati, saya ingin booking dengan Dr. Dokter 1.",
       },
       {
         id: "doctor-2",
-        name: "Nama Dokter Placeholder",
-        position: "Tenaga Medis Placeholder",
-        bio: "Deskripsi singkat placeholder mengenai pendampingan pasien dan edukasi perawatan.",
+        name: "Dr. Dokter 2",
+        position: "Tenaga Medis",
+        bio: "Tenaga medis yang berpengalaman dalam pendampingan pasien dan edukasi perawatan luka pasca tindakan.",
         expertise: ["Perawatan Luka", "Edukasi Pasien"],
         specialtyTags: ["Pemulihan", "Edukasi"],
-        schedule: "Jadwal praktik placeholder",
-        imageLabel: "Foto dokter placeholder 2",
+        schedule: "Senin - Sabtu, 08:00 - 16:00",
+        imageLabel: "Foto Dr. Dokter 2",
+        imageSrc: "/images/dr 2.png",
         ctaLabel: "Booking",
         ctaMessage:
-          "Halo Rumah Sunat Modern Jati, saya ingin booking dengan dokter placeholder 2.",
+          "Halo Rumah Sunat Modern Jati, saya ingin booking dengan Dr. Dokter 2.",
       },
       {
         id: "doctor-3",
-        name: "Nama Dokter Placeholder",
-        position: "Konsultan Kesehatan Placeholder",
-        bio: "Deskripsi singkat placeholder mengenai konsultasi awal dan rekomendasi layanan.",
+        name: "Tenaga Medis",
+        position: "Konsultan Kesehatan",
+        bio: "Konsultan kesehatan yang siap membantu konsultasi awal dan memberikan rekomendasi layanan terbaik.",
         expertise: ["Konsultasi", "Pemeriksaan Awal"],
         specialtyTags: ["Konsultasi", "Skrining"],
-        schedule: "Jadwal praktik placeholder",
-        imageLabel: "Foto dokter placeholder 3",
+        schedule: "Senin - Sabtu, 08:00 - 16:00",
+        imageLabel: "Foto tenaga medis",
         ctaLabel: "Booking",
         ctaMessage:
-          "Halo Rumah Sunat Modern Jati, saya ingin booking dengan dokter placeholder 3.",
+          "Halo Rumah Sunat Modern Jati, saya ingin booking konsultasi.",
       },
     ] satisfies TeamDoctor[],
   },

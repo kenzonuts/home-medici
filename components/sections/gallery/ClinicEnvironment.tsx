@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Check } from "lucide-react";
 
 import { FadeLeft, FadeRight } from "@/components/animations";
@@ -18,11 +19,21 @@ export function ClinicEnvironment() {
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
         <FadeLeft>
           <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-border shadow-md">
-            <GalleryPlaceholderImage
-              label={environment.imageLabel}
-              tone="teal"
-              sizes="(min-width: 1024px) 50vw, 100vw"
-            />
+            {environment.imageSrc ? (
+              <Image
+                src={environment.imageSrc}
+                alt={environment.imageLabel}
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
+            ) : (
+              <GalleryPlaceholderImage
+                label={environment.imageLabel}
+                tone="teal"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+              />
+            )}
           </div>
         </FadeLeft>
 

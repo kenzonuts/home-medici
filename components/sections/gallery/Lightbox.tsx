@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
@@ -130,12 +131,23 @@ export function Lightbox({
             onMouseDown={(event) => event.stopPropagation()}
           >
             <div className="relative aspect-[16/11] max-h-[72vh] w-full bg-muted">
-              <GalleryPlaceholderImage
-                label={activeItem.imageLabel}
-                tone={activeItem.tone}
-                sizes="100vw"
-                priority
-              />
+              {activeItem.imageSrc ? (
+                <Image
+                  src={activeItem.imageSrc}
+                  alt={activeItem.imageLabel}
+                  fill
+                  sizes="100vw"
+                  priority
+                  className="object-contain"
+                />
+              ) : (
+                <GalleryPlaceholderImage
+                  label={activeItem.imageLabel}
+                  tone={activeItem.tone}
+                  sizes="100vw"
+                  priority
+                />
+              )}
 
               <button
                 ref={closeButtonRef}

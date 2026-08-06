@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { FadeLeft, FadeRight } from "@/components/animations";
 import { Section } from "@/components/layout/Section";
 import { GalleryPlaceholderImage } from "@/components/sections/gallery/GalleryPlaceholderImage";
@@ -12,12 +14,23 @@ export function GalleryIntroduction() {
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
         <FadeLeft>
           <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-border shadow-md">
-            <GalleryPlaceholderImage
-              label={introduction.imageLabel}
-              tone="green"
-              priority
-              sizes="(min-width: 1024px) 50vw, 100vw"
-            />
+            {introduction.imageSrc ? (
+              <Image
+                src={introduction.imageSrc}
+                alt={introduction.imageLabel}
+                fill
+                priority
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
+            ) : (
+              <GalleryPlaceholderImage
+                label={introduction.imageLabel}
+                tone="green"
+                priority
+                sizes="(min-width: 1024px) 50vw, 100vw"
+              />
+            )}
           </div>
         </FadeLeft>
 
