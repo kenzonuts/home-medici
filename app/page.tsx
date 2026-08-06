@@ -13,9 +13,9 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <MedicalTeamPreview />
       <ServicesPreview />
       <WhyChooseUs />
-      <MedicalTeamPreview />
       <GalleryPreview />
       <Testimonials />
       <BookingSection />

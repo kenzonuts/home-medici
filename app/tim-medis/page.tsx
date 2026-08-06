@@ -28,8 +28,8 @@ export default function MedicalTeamPage() {
         description={header.description}
         breadcrumbs={header.breadcrumbs}
       />
-      <TeamIntroduction />
       <MedicalTeamGrid />
+      <TeamIntroduction />
       <Qualifications />
       <ExpertiseAreas />
       <WhyChooseMedicalTeam />
