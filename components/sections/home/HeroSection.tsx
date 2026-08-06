@@ -2,7 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, MessageCircle, Stethoscope } from "lucide-react";
 
-import { FadeRight, FadeUp, StaggerContainer, StaggerItem } from "@/components/animations";
+import {
+  FadeRight,
+  FadeUp,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/animations";
 import { featureIconMap } from "@/components/sections/home/icons";
 import { buttonVariants } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -17,60 +22,65 @@ export function HeroSection() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative overflow-hidden"
+      className="relative overflow-x-hidden"
     >
       {/* Atmosphere */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgb(34_197_94_/_0.10),_transparent_50%),radial-gradient(ellipse_at_80%_20%,_rgb(14_165_233_/_0.12),_transparent_45%)]"
       />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute top-24 left-[8%] size-2 rounded-full bg-primary/25"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute top-40 left-[18%] size-1.5 rounded-full bg-secondary/30"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute top-56 left-[12%] size-1 rounded-full bg-primary/20"
-      />
 
-      <Container className="relative grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-10 lg:py-24 xl:gap-14">
+      <Container
+        className={cn(
+          "relative grid min-w-0 items-center",
+          "gap-8 py-10 pb-20",
+          "sm:gap-10 sm:py-16 sm:pb-24",
+          "lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-10 lg:py-24 lg:pb-28",
+          "xl:gap-14",
+        )}
+      >
         {/* Copy */}
-        <div className="flex max-w-xl flex-col gap-6 lg:max-w-none">
+        <div className="flex min-w-0 max-w-xl flex-col gap-5 sm:gap-6 lg:max-w-none">
           <FadeUp>
-            <p className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-3.5 py-1.5 text-sm font-medium text-primary">
-              <CheckCircle2 className="size-4 shrink-0" aria-hidden />
-              {hero.badge}
+            <p
+              className={cn(
+                "inline-flex max-w-full items-center gap-2 rounded-full",
+                "border border-primary/15 bg-primary/5",
+                "px-3 py-1.5 text-xs font-medium text-primary sm:px-3.5 sm:text-sm",
+              )}
+            >
+              <CheckCircle2 className="size-3.5 shrink-0 sm:size-4" aria-hidden />
+              <span className="min-w-0 leading-snug">{hero.badge}</span>
             </p>
           </FadeUp>
 
           <FadeUp>
-            <HeadingXL id="hero-heading" className="max-w-xl text-balance">
+            <HeadingXL
+              id="hero-heading"
+              className="max-w-xl text-balance text-[1.75rem] leading-tight sm:text-4xl lg:text-5xl xl:text-6xl"
+            >
               {hero.headlinePrefix}{" "}
               <span className="text-primary">{hero.headlineHighlight}</span>
             </HeadingXL>
           </FadeUp>
 
           <FadeUp>
-            <Paragraph className="max-w-lg text-base sm:text-lg">
+            <Paragraph className="max-w-lg text-sm sm:text-base lg:text-lg">
               {hero.description}
             </Paragraph>
           </FadeUp>
 
           <FadeUp>
-            <StaggerContainer className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+            <StaggerContainer className="grid grid-cols-2 gap-x-3 gap-y-3 sm:grid-cols-4 sm:gap-4">
               {hero.highlights.map((item) => {
                 const Icon = featureIconMap[item.icon];
                 return (
-                  <StaggerItem key={item.id}>
-                    <div className="flex items-center gap-2.5">
-                      <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                        <Icon className="size-4" aria-hidden />
+                  <StaggerItem key={item.id} className="min-w-0">
+                    <div className="flex min-w-0 items-center gap-2 sm:gap-2.5">
+                      <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary sm:size-9">
+                        <Icon className="size-3.5 sm:size-4" aria-hidden />
                       </span>
-                      <span className="font-heading text-xs font-semibold leading-snug text-foreground sm:text-sm">
+                      <span className="min-w-0 font-heading text-[0.7rem] font-semibold leading-snug text-foreground sm:text-sm">
                         {item.label}
                       </span>
                     </div>
@@ -81,63 +91,64 @@ export function HeroSection() {
           </FadeUp>
 
           <FadeUp>
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="flex w-full flex-col gap-3 sm:flex-row sm:items-center">
               <Link
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
                   buttonVariants({ variant: "primary", size: "lg" }),
-                  "rounded-2xl px-7 shadow-md shadow-primary/20",
+                  "h-12 w-full rounded-2xl px-5 shadow-md shadow-primary/20 sm:w-auto sm:px-7",
                 )}
               >
-                <MessageCircle className="size-5" aria-hidden />
-                {hero.primaryCta}
+                <MessageCircle className="size-5 shrink-0" aria-hidden />
+                <span className="truncate">{hero.primaryCta}</span>
               </Link>
               <Link
                 href={hero.secondaryHref}
                 className={cn(
                   buttonVariants({ variant: "outline", size: "lg" }),
-                  "rounded-2xl border-secondary/40 px-7 text-secondary hover:border-secondary hover:bg-secondary/5 hover:text-secondary",
+                  "h-12 w-full rounded-2xl border-secondary/40 px-5 text-secondary",
+                  "hover:border-secondary hover:bg-secondary/5 hover:text-secondary",
+                  "sm:w-auto sm:px-7",
                 )}
               >
-                <Stethoscope className="size-4" aria-hidden />
-                {hero.secondaryCta}
+                <Stethoscope className="size-4 shrink-0" aria-hidden />
+                <span className="truncate">{hero.secondaryCta}</span>
               </Link>
             </div>
           </FadeUp>
         </div>
 
-        {/* Organic visual */}
-        <FadeRight>
-          <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
-            {/* Soft glow behind blob */}
+        {/* Organic visual — first on mobile for presence, second on desktop */}
+        <FadeRight className="order-first min-w-0 lg:order-last">
+          <div className="relative mx-auto w-full max-w-[17.5rem] overflow-visible sm:max-w-md lg:max-w-none">
             <div
               aria-hidden
-              className="absolute top-1/2 left-1/2 -z-10 size-[90%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary/20 blur-3xl"
+              className="absolute top-1/2 left-1/2 -z-10 size-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary/20 blur-2xl sm:blur-3xl"
             />
             <div
               aria-hidden
-              className="absolute -top-6 -right-4 -z-10 size-40 rounded-full bg-primary/15 blur-2xl"
+              className="absolute -top-4 -right-2 -z-10 hidden size-28 rounded-full bg-primary/15 blur-2xl sm:block sm:size-40"
             />
 
             <div
               className={cn(
-                "relative aspect-[4/5] overflow-hidden sm:aspect-[5/4] lg:aspect-[4/3.4]",
-                "shadow-[0_25px_60px_-20px_rgb(15_23_42_/_0.25)]",
+                "relative mx-auto aspect-square overflow-hidden sm:aspect-[5/4] lg:aspect-[4/3.4]",
+                "shadow-[0_20px_50px_-18px_rgb(15_23_42_/_0.28)]",
                 "ring-1 ring-white/60",
+                /* softer organic shape on small screens; fuller blob on lg */
+                "rounded-[2.5rem] sm:rounded-[3rem]",
+                "lg:[border-radius:58%_42%_48%_52%/42%_48%_52%_58%]",
               )}
-              style={{
-                borderRadius: "58% 42% 48% 52% / 42% 48% 52% 58%",
-              }}
             >
               <Image
                 src={hero.imageSrc}
                 alt={hero.imageLabel}
                 fill
                 priority
-                sizes="(max-width: 1024px) 90vw, 45vw"
-                className="object-cover object-[center_20%]"
+                sizes="(max-width: 640px) 70vw, (max-width: 1024px) 50vw, 45vw"
+                className="object-cover object-[center_18%]"
               />
               <div
                 aria-hidden
@@ -145,25 +156,27 @@ export function HeroSection() {
               />
             </div>
 
-            {/* Accent orb — decorative, not content overlay */}
             <div
               aria-hidden
-              className="absolute -bottom-3 left-[12%] size-16 rounded-full bg-gradient-to-br from-primary to-accent opacity-90 shadow-lg shadow-primary/30 sm:size-20"
+              className="absolute -bottom-2 left-[10%] size-12 rounded-full bg-gradient-to-br from-primary to-accent opacity-90 shadow-lg shadow-primary/30 sm:-bottom-3 sm:left-[12%] sm:size-16 lg:size-20"
             />
             <div
               aria-hidden
-              className="absolute top-[8%] -right-2 size-10 rounded-full border-4 border-surface bg-secondary/80 shadow-md sm:size-12"
+              className="absolute top-[6%] right-0 size-8 rounded-full border-4 border-surface bg-secondary/80 shadow-md sm:-right-1 sm:size-10 lg:size-12"
             />
           </div>
         </FadeRight>
       </Container>
 
       {/* Soft wave transition */}
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 leading-[0]">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 leading-[0]"
+      >
         <svg
           viewBox="0 0 1440 96"
           preserveAspectRatio="none"
-          className="h-12 w-full text-background sm:h-16"
+          className="h-10 w-full text-background sm:h-14 lg:h-16"
         >
           <path
             fill="currentColor"
