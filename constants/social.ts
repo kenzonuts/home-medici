@@ -10,11 +10,7 @@ export type SocialLink = {
  */
 export const socialLinks: SocialLink[] = [
   { label: "Instagram", href: "", icon: "instagram" },
-  {
-    label: "Facebook",
-    href: "https://www.facebook.com/search/top?q=koko%20Ginanjar%20saputro",
-    icon: "facebook",
-  },
+  { label: "Facebook", href: "", icon: "facebook" },
   {
     label: "TikTok",
     href: "https://www.tiktok.com/@rumah.sunat.modern.jati",

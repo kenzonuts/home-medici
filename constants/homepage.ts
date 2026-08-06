@@ -57,8 +57,8 @@ export const homepageContent = {
     primaryCta: "Booking via WhatsApp",
     secondaryCta: "Lihat Layanan",
     secondaryHref: "/layanan",
-    imageLabel: "Ilustrasi klinik modern",
-    imageSrc: "/images/tampilan depan klinik.jpeg",
+    imageLabel: "Rumah Sunat Modern Jati",
+    imageSrc: "/images/foto awal.png",
   },
   services: {
     eyebrow: "Layanan",

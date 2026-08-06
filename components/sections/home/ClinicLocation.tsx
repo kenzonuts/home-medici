@@ -31,20 +31,15 @@ export function ClinicLocation() {
 
       <div className="grid items-stretch gap-6 lg:grid-cols-2 lg:gap-8">
         <FadeLeft>
-          <div
-            role="img"
-            aria-label={location.mapLabel}
-            className="flex min-h-[18rem] items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted lg:min-h-full"
-          >
-            <div className="flex flex-col items-center gap-3 p-6 text-center text-muted-foreground">
-              <IconWrapper variant="muted" size="lg" rounded="full">
-                <MapPin aria-hidden />
-              </IconWrapper>
-              <p className="text-sm font-medium">{location.mapLabel}</p>
-              <p className="max-w-xs text-xs">
-                Embed Google Maps akan ditambahkan pada fase berikutnya.
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-2xl border border-border bg-muted lg:min-h-full">
+            <iframe
+              title={location.mapLabel}
+              src={CONTACT.mapsEmbedSrc}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="block min-h-[18rem] w-full border-0 lg:min-h-full lg:h-full"
+              allowFullScreen
+            />
           </div>
         </FadeLeft>
 

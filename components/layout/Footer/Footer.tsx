@@ -10,6 +10,7 @@ import { FooterLinks } from "@/components/layout/Footer/FooterLinks";
 import {
   FacebookIcon,
   InstagramIcon,
+  TikTokIcon,
   YoutubeIcon,
 } from "@/components/layout/Footer/SocialIcons";
 import { Logo } from "@/components/layout/Logo";
@@ -23,6 +24,7 @@ const socialIconMap = {
   instagram: InstagramIcon,
   facebook: FacebookIcon,
   youtube: YoutubeIcon,
+  tiktok: TikTokIcon,
 } as const;
 
 function SocialLinks({ className }: { className?: string }) {

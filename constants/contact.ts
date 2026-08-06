@@ -143,7 +143,7 @@ export const contactContent = {
         label: "Facebook",
         handle: "koko Ginanjar saputro",
         description: "Update informasi layanan dan pengumuman klinik.",
-        href: "https://www.facebook.com/search/top?q=koko%20Ginanjar%20saputro",
+        href: "",
       },
       {
         id: "instagram",
