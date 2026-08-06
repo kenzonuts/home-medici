@@ -233,8 +233,9 @@ export const galleryContent = {
     eyebrow: "Lingkungan Klinik",
     title: "Clinic Environment",
     description:
-      "Bagian ini menjelaskan suasana klinik yang disiapkan untuk mendukung kenyamanan pasien, keluarga, dan tim medis.",
-    imageLabel: "Foto lingkungan klinik placeholder",
+      "Suasana klinik yang disiapkan untuk mendukung kenyamanan pasien, keluarga, dan tim medis dengan standar kebersihan tinggi.",
+    imageLabel: "Foto lingkungan klinik",
+    imageSrc: "/images/tampilan depan klinik.jpeg",
     features: [
       { id: "comfortable", label: "Comfortable" },
       { id: "clean", label: "Clean" },

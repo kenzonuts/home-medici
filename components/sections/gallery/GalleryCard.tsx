@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Eye } from "lucide-react";
 
 import { GalleryPlaceholderImage } from "@/components/sections/gallery/GalleryPlaceholderImage";
@@ -39,12 +40,22 @@ export function GalleryCard({ item, onOpen }: GalleryCardProps) {
             aspectClassMap[item.aspect],
           )}
         >
-          <GalleryPlaceholderImage
-            label={item.imageLabel}
-            tone={item.tone}
-            sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-            className="transition-transform duration-500 group-hover:scale-105"
-          />
+          {item.imageSrc ? (
+            <Image
+              src={item.imageSrc}
+              alt={item.imageLabel}
+              fill
+              sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+              className={cn("object-cover transition-transform duration-500 group-hover:scale-105")}
+            />
+          ) : (
+            <GalleryPlaceholderImage
+              label={item.imageLabel}
+              tone={item.tone}
+              sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+              className="transition-transform duration-500 group-hover:scale-105"
+            />
+          )}
           <div className="absolute inset-0 bg-foreground/0 transition-colors duration-300 group-hover:bg-foreground/25" />
           <div className="absolute top-4 left-4">
             <Badge variant="outline">{item.categoryLabel}</Badge>
