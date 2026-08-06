@@ -53,7 +53,7 @@ export type {
   TeamBreadcrumb,
   TeamTrustItem,
 } from "./team";
-export { SITE_DESCRIPTION, SITE_LOCALE, SITE_NAME, SITE_URL } from "./site";
+export { SITE_DESCRIPTION, SITE_LOCALE, SITE_NAME, SITE_URL, STUDIO_CREDIT } from "./site";
 export { socialLinks } from "./social";
 export type { SocialLink } from "./social";
 export { spacing } from "./spacing";
