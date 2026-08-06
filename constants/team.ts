@@ -52,24 +52,6 @@ export const teamContent = {
     imageLabel: "Tim medis Rumah Sunat Modern Jati",
     imageSrc: "/images/hero-klinik.png",
   },
-  featuredDoctor: {
-    eyebrow: "Tim Medis",
-    name: "Tim Medis Rumah Sunat Modern Jati",
-    position: "Dokter & Tenaga Kesehatan",
-    bio: "Tim medis kami berpengalaman dalam layanan sunat modern dengan pendekatan yang ramah, profesional, dan mengutamakan kenyamanan pasien serta keluarga.",
-    expertise: [
-      "Sunat bayi dan anak",
-      "Konsultasi pra-tindakan",
-      "Pendampingan pemulihan",
-      "Edukasi keluarga",
-    ],
-    yearsExperience: "Pengalaman klinis",
-    imageLabel: "Tim medis Rumah Sunat Modern Jati",
-    imageSrc: "/images/hero-klinik.png",
-    ctaLabel: "Booking WhatsApp",
-    ctaMessage:
-      "Halo Rumah Sunat Modern Jati, saya ingin booking konsultasi dengan tim medis.",
-  },
   qualifications: {
     eyebrow: "Kualifikasi",
     title: "Kualifikasi & Sertifikasi",

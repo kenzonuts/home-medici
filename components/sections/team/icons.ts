@@ -5,7 +5,6 @@ import {
   GraduationCap,
   HandHeart,
   HeartHandshake,
-  HeartPulse,
   ShieldCheck,
   Sparkles,
   Stethoscope,
@@ -47,8 +46,3 @@ export const teamTrustIconMap: Record<TeamTrustItem["icon"], LucideIcon> = {
   safety: ShieldCheck,
   personalized: HandHeart,
 };
-
-export const featuredDoctorIconMap = {
-  experience: HeartPulse,
-  safety: ShieldCheck,
-} as const;

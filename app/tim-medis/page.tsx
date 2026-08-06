@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import {
   ExpertiseAreas,
-  FeaturedDoctor,
   Qualifications,
   TeamAppointmentCta,
   TeamIntroduction,
@@ -29,7 +28,6 @@ export default function MedicalTeamPage() {
         breadcrumbs={header.breadcrumbs}
       />
       <TeamIntroduction />
-      <FeaturedDoctor />
       <Qualifications />
       <ExpertiseAreas />
       <WhyChooseMedicalTeam />
