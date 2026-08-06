@@ -16,11 +16,13 @@ export type DoctorPreview = {
   id: string;
   name: string;
   position: string;
+  imageSrc?: string;
 };
 
 export type GalleryItem = {
   id: string;
   label: string;
+  imageSrc?: string;
 };
 
 export type TestimonialItem = {
@@ -55,6 +57,8 @@ export const homepageContent = {
     primaryCta: "Booking via WhatsApp",
     secondaryCta: "Lihat Layanan",
     secondaryHref: "/layanan",
+    imageLabel: "Ilustrasi klinik modern",
+    imageSrc: "/images/tampilan depan klinik.jpeg",
   },
   services: {
     eyebrow: "Layanan",
@@ -166,18 +170,20 @@ export const homepageContent = {
     items: [
       {
         id: "dokter-1",
-        name: "Nama Dokter",
-        position: "Dokter Pelaksana",
+        name: "Dr. Dokter 1",
+        position: "Dokter Umum",
+        imageSrc: "/images/dr 1.png",
       },
       {
         id: "dokter-2",
-        name: "Nama Dokter",
-        position: "Dokter Konsultan",
+        name: "Dr. Dokter 2",
+        position: "Tenaga Medis",
+        imageSrc: "/images/dr 2.png",
       },
       {
         id: "dokter-3",
-        name: "Nama Dokter",
-        position: "Tenaga Medis",
+        name: "Tenaga Medis",
+        position: "Konsultan Kesehatan",
       },
     ] satisfies DoctorPreview[],
   },
@@ -188,12 +194,12 @@ export const homepageContent = {
     ctaLabel: "Lihat Galeri",
     ctaHref: "/galeri",
     items: [
-      { id: "galeri-1", label: "Ruang tunggu" },
-      { id: "galeri-2", label: "Ruang tindakan" },
-      { id: "galeri-3", label: "Area konsultasi" },
-      { id: "galeri-4", label: "Fasilitas klinik" },
-      { id: "galeri-5", label: "Peralatan medis" },
-      { id: "galeri-6", label: "Suasana pelayanan" },
+      { id: "galeri-1", label: "Ruang tunggu", imageSrc: "/images/ruang tunggu .jpeg" },
+      { id: "galeri-2", label: "Ruang tindakan", imageSrc: "/images/ruang sunat.png" },
+      { id: "galeri-3", label: "Area konsultasi", imageSrc: "/images/konsultasi.png" },
+      { id: "galeri-4", label: "Fasilitas klinik", imageSrc: "/images/foto awal.png" },
+      { id: "galeri-5", label: "Tampilan klinik", imageSrc: "/images/tampilan depan klinik.jpeg" },
+      { id: "galeri-6", label: "Ruang tunggu & parkir", imageSrc: "/images/ruang tunggu dan parkir.png" },
     ] satisfies GalleryItem[],
   },
   testimonials: {
@@ -266,8 +272,7 @@ export const homepageContent = {
     description: "Kunjungi klinik kami sesuai jam operasional yang tersedia.",
     mapLabel: "Peta lokasi klinik",
     hours: [
-      { days: "Senin – Sabtu", hours: "08.00 – 17.00" },
-      { days: "Minggu", hours: "Dengan perjanjian" },
+      { days: "Setiap hari", hours: "06.00 – 21.00" },
     ] satisfies OpeningHour[],
   },
 } as const;

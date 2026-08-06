@@ -34,22 +34,22 @@ export type ContactSocialCard = {
 
 /**
  * Clinic contact endpoints.
- * Replace placeholder values before production launch.
  */
 export const CONTACT = {
-  phoneDisplay: "+62 812-0000-0000",
-  phoneHref: "tel:+6281200000000",
-  email: "info@rumahsunatmodernjati.id",
-  emailHref: "mailto:info@rumahsunatmodernjati.id",
+  phoneDisplay: "0856-4177-7359",
+  phoneHref: "tel:+6285641777359",
+  email: "kokoginanjar@gmail.com",
+  emailHref: "mailto:kokoginanjar@gmail.com",
   /** Digits only, country code included (no +). */
-  whatsappNumber: "6281200000000",
+  whatsappNumber: "6285641777359",
   whatsappMessage: "Halo Rumah Sunat Modern Jati, saya ingin booking.",
-  address: "Jati, Indonesia",
-  workingHours: "Senin - Sabtu, 08.00 - 17.00",
+  address:
+    "Jl. Babakan No. 063 RT 010/005, Desa Jati, Kec. Binangun, Kab. Cilacap",
+  workingHours: "Setiap hari, 06.00 - 21.00",
   mapsHref:
-    "https://www.google.com/maps/search/?api=1&query=Jati%2C%20Indonesia",
+    "https://www.google.com/maps/search/?api=1&query=Jl.%20Babakan%20No.%20063%20RT%20010%2F005%20Desa%20Jati%20Kec.%20Binangun%20Kab.%20Cilacap",
   mapsEmbedSrc:
-    "https://www.google.com/maps?q=Jati%2C%20Indonesia&output=embed",
+    "https://www.google.com/maps?q=Jl.%20Babakan%20No.%20063%20RT%20010%2F005%20Desa%20Jati%20Kec.%20Binangun%20Kab.%20Cilacap&output=embed",
   ctaLabel: "Booking WhatsApp",
 } as const;
 
@@ -126,10 +126,10 @@ export const contactContent = {
     eyebrow: "Lokasi",
     title: "Temukan Klinik Kami",
     description:
-      "Peta berikut menggunakan embed Google Maps placeholder dan siap diganti dengan titik lokasi resmi saat alamat final tersedia.",
+      "Gunakan peta di bawah untuk melihat rute menuju Rumah Sunat Modern Jati di Desa Jati, Binangun, Cilacap.",
     addressLabel: "Alamat Klinik",
     locationDescription:
-      "Rumah Sunat Modern Jati berada di area Jati dengan akses kunjungan yang mudah untuk pasien dan keluarga.",
+      "Klinik berada di Jl. Babakan No. 063 RT 010/005, Desa Jati, Kecamatan Binangun, Kabupaten Cilacap.",
   },
   social: {
     eyebrow: "Media Sosial",
@@ -141,15 +141,15 @@ export const contactContent = {
         id: "facebook",
         platform: "facebook",
         label: "Facebook",
-        handle: "Rumah Sunat Modern Jati",
+        handle: "koko Ginanjar saputro",
         description: "Update informasi layanan dan pengumuman klinik.",
-        href: "",
+        href: "https://www.facebook.com/search/top?q=koko%20Ginanjar%20saputro",
       },
       {
         id: "instagram",
         platform: "instagram",
         label: "Instagram",
-        handle: "@rumahsunatmodernjati",
+        handle: "Belum tersedia",
         description: "Konten edukasi, galeri, dan aktivitas klinik.",
         href: "",
       },
@@ -157,9 +157,9 @@ export const contactContent = {
         id: "tiktok",
         platform: "tiktok",
         label: "TikTok",
-        handle: "@rumahsunatmodernjati",
+        handle: "@rumah.sunat.modern.jati",
         description: "Video edukasi singkat dan informasi perawatan.",
-        href: "",
+        href: "https://www.tiktok.com/@rumah.sunat.modern.jati",
       },
     ] satisfies ContactSocialCard[],
   },
@@ -167,31 +167,31 @@ export const contactContent = {
     eyebrow: "FAQ",
     title: "Pertanyaan yang Sering Diajukan",
     description:
-      "Jawaban placeholder untuk membantu pasien memahami alur kontak dan kunjungan.",
+      "Jawaban singkat untuk membantu pasien memahami alur kontak dan kunjungan.",
     items: [
       {
         id: "booking",
         question: "Bagaimana cara booking?",
         answer:
-          "Booking dapat dilakukan melalui WhatsApp admin dengan menyebutkan nama pasien, usia, layanan yang dibutuhkan, dan jadwal kunjungan yang diinginkan.",
+          "Booking dapat dilakukan melalui WhatsApp admin di 0856-4177-7359 dengan menyebutkan nama pasien, usia, layanan yang dibutuhkan, dan jadwal kunjungan yang diinginkan.",
       },
       {
         id: "hours",
         question: "Jam operasional?",
         answer:
-          "Jam operasional placeholder adalah Senin sampai Sabtu pukul 08.00 - 17.00. Jadwal khusus dapat dikonfirmasi terlebih dahulu melalui WhatsApp.",
+          "Jam operasional klinik adalah setiap hari pukul 06.00 - 21.00. Jadwal khusus dapat dikonfirmasi terlebih dahulu melalui WhatsApp.",
       },
       {
         id: "adult",
         question: "Apakah menerima pasien dewasa?",
         answer:
-          "Ya, layanan placeholder mencakup pasien bayi, anak, dan dewasa. Admin akan membantu mengarahkan jadwal konsultasi sesuai kebutuhan pasien.",
+          "Ya, layanan mencakup pasien bayi, anak, dan dewasa. Admin akan membantu mengarahkan jadwal konsultasi sesuai kebutuhan pasien.",
       },
       {
         id: "location",
         question: "Lokasi klinik?",
         answer:
-          "Alamat placeholder klinik berada di Jati, Indonesia. Titik Google Maps resmi dapat diperbarui setelah data lokasi final tersedia.",
+          "Klinik berada di Jl. Babakan No. 063 RT 010/005, Desa Jati, Kec. Binangun, Kab. Cilacap. Anda dapat membuka lokasi melalui Google Maps di halaman kontak.",
       },
     ] satisfies ContactFaqItem[],
   },

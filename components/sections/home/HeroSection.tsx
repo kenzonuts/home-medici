@@ -88,7 +88,8 @@ export function HeroSection() {
               className="absolute -inset-3 -z-10 rounded-[1.75rem] bg-gradient-to-br from-primary/15 via-transparent to-secondary/15"
             />
             <ImagePlaceholder
-              label="Ilustrasi klinik modern"
+              label={hero.imageLabel}
+              imageSrc={hero.imageSrc}
               aspect="hero"
               className="rounded-2xl border border-border shadow-lg"
             />

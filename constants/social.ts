@@ -2,15 +2,22 @@ export type SocialLink = {
   label: string;
   href: string;
   /** Lucide icon key resolved in the Footer component. */
-  icon: "instagram" | "facebook" | "youtube";
+  icon: "instagram" | "facebook" | "youtube" | "tiktok";
 };
 
 /**
- * Social profiles — update `href` when accounts are ready.
- * Empty href hides the link from the UI.
+ * Social profiles — empty href hides the link from the UI.
  */
 export const socialLinks: SocialLink[] = [
   { label: "Instagram", href: "", icon: "instagram" },
-  { label: "Facebook", href: "", icon: "facebook" },
-  { label: "YouTube", href: "", icon: "youtube" },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/search/top?q=koko%20Ginanjar%20saputro",
+    icon: "facebook",
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@rumah.sunat.modern.jati",
+    icon: "tiktok",
+  },
 ];

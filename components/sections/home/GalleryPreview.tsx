@@ -35,6 +35,7 @@ export function GalleryPreview() {
               media={
                 <ImagePlaceholder
                   label={item.label}
+                  imageSrc={item.imageSrc}
                   aspect="none"
                   className="absolute inset-0 h-full transition-transform duration-300 group-hover:scale-105"
                 />

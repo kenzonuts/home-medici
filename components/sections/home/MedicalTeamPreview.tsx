@@ -30,6 +30,7 @@ export function MedicalTeamPreview() {
               media={
                 <ImagePlaceholder
                   label={`Foto ${doctor.name}`}
+                  imageSrc={doctor.imageSrc}
                   aspect="portrait"
                   className="rounded-none"
                 />
