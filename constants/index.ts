@@ -29,6 +29,7 @@ export type {
 } from "./gallery";
 export { homepageContent } from "./homepage";
 export type {
+  DoctorPreview,
   FeatureItem,
   GalleryItem,
   OpeningHour,
@@ -51,6 +52,7 @@ export type {
   ExpertiseArea,
   QualificationItem,
   TeamBreadcrumb,
+  TeamDoctor,
   TeamTrustItem,
 } from "./team";
 export { SITE_DESCRIPTION, SITE_LOCALE, SITE_NAME, SITE_URL, STUDIO_CREDIT } from "./site";

@@ -18,6 +18,13 @@ export type GalleryItem = {
   imageSrc?: string;
 };
 
+export type DoctorPreview = {
+  id: string;
+  name: string;
+  position: string;
+  imageSrc?: string;
+};
+
 export type TestimonialItem = {
   id: string;
   name: string;
@@ -153,6 +160,27 @@ export const homepageContent = {
         icon: "sterile",
       },
     ] satisfies FeatureItem[],
+  },
+  team: {
+    eyebrow: "Tim Medis",
+    title: "Tim Medis Kami",
+    description: "Kenali tenaga medis yang siap mendampingi perawatan Anda.",
+    ctaLabel: "Lihat Tim Medis",
+    ctaHref: "/tim-medis",
+    items: [
+      {
+        id: "dokter-1",
+        name: "dr. Muhammad Fadil Azka",
+        position: "Dokter",
+        imageSrc: "/images/dr 1.png",
+      },
+      {
+        id: "dokter-2",
+        name: "Ns. Koko Ginanjar Saputro, S.Kep.",
+        position: "Tenaga Medis",
+        imageSrc: "/images/dr 2.png",
+      },
+    ] satisfies DoctorPreview[],
   },
   gallery: {
     eyebrow: "Galeri",

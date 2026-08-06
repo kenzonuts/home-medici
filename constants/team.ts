@@ -2,6 +2,20 @@ import type { BreadcrumbItem } from "@/constants/services";
 
 export type TeamBreadcrumb = BreadcrumbItem;
 
+export type TeamDoctor = {
+  id: string;
+  name: string;
+  position: string;
+  bio: string;
+  expertise: readonly string[];
+  specialtyTags: readonly string[];
+  schedule: string;
+  imageLabel: string;
+  imageSrc?: string;
+  ctaLabel: string;
+  ctaMessage: string;
+};
+
 export type QualificationItem = {
   id: string;
   title: string;
@@ -51,6 +65,42 @@ export const teamContent = {
     body: "Dengan pendekatan ramah dan profesional, tim medis Rumah Sunat Modern Jati siap mendampingi setiap usia pasien agar prosedur berlangsung lebih aman dan nyaman.",
     imageLabel: "Tim medis Rumah Sunat Modern Jati",
     imageSrc: "/images/hero-klinik.png",
+  },
+  doctors: {
+    eyebrow: "Daftar Tim",
+    title: "Dokter dan Tenaga Kesehatan",
+    description:
+      "Kenali dokter dan tenaga medis yang siap mendampingi perawatan Anda.",
+    items: [
+      {
+        id: "doctor-1",
+        name: "dr. Muhammad Fadil Azka",
+        position: "Dokter",
+        bio: "Dokter yang fokus pada layanan sunat modern dengan pendekatan ramah, profesional, dan mengutamakan kenyamanan pasien serta keluarga.",
+        expertise: ["Sunat Anak", "Konsultasi"],
+        specialtyTags: ["Anak", "Keluarga"],
+        schedule: "Setiap hari, 06.00 - 21.00",
+        imageLabel: "Foto dr. Muhammad Fadil Azka",
+        imageSrc: "/images/dr 1.png",
+        ctaLabel: "Booking",
+        ctaMessage:
+          "Halo Rumah Sunat Modern Jati, saya ingin booking dengan dr. Muhammad Fadil Azka.",
+      },
+      {
+        id: "doctor-2",
+        name: "Ns. Koko Ginanjar Saputro, S.Kep.",
+        position: "Tenaga Medis",
+        bio: "Tenaga medis berpengalaman dalam pendampingan pasien, edukasi perawatan, dan memastikan proses layanan berjalan aman serta nyaman.",
+        expertise: ["Perawatan", "Edukasi Pasien"],
+        specialtyTags: ["Pemulihan", "Edukasi"],
+        schedule: "Setiap hari, 06.00 - 21.00",
+        imageLabel: "Foto Ns. Koko Ginanjar Saputro",
+        imageSrc: "/images/dr 2.png",
+        ctaLabel: "Booking",
+        ctaMessage:
+          "Halo Rumah Sunat Modern Jati, saya ingin booking dengan Ns. Koko Ginanjar Saputro.",
+      },
+    ] satisfies TeamDoctor[],
   },
   qualifications: {
     eyebrow: "Kualifikasi",
