@@ -12,13 +12,6 @@ export type FeatureItem = {
   icon: "doctor" | "modern" | "comfort" | "friendly" | "fast" | "sterile";
 };
 
-export type DoctorPreview = {
-  id: string;
-  name: string;
-  position: string;
-  imageSrc?: string;
-};
-
 export type GalleryItem = {
   id: string;
   label: string;
@@ -168,32 +161,6 @@ export const homepageContent = {
         icon: "sterile",
       },
     ] satisfies FeatureItem[],
-  },
-  team: {
-    eyebrow: "Tim Medis",
-    title: "Tim Medis Kami",
-    description: "Kenali tenaga medis yang siap mendampingi perawatan Anda.",
-    ctaLabel: "Lihat Tim Medis",
-    ctaHref: "/tim-medis",
-    items: [
-      {
-        id: "dokter-1",
-        name: "Dr. Dokter 1",
-        position: "Dokter Umum",
-        imageSrc: "/images/dr 1.png",
-      },
-      {
-        id: "dokter-2",
-        name: "Dr. Dokter 2",
-        position: "Tenaga Medis",
-        imageSrc: "/images/dr 2.png",
-      },
-      {
-        id: "dokter-3",
-        name: "Tenaga Medis",
-        position: "Konsultan Kesehatan",
-      },
-    ] satisfies DoctorPreview[],
   },
   gallery: {
     eyebrow: "Galeri",

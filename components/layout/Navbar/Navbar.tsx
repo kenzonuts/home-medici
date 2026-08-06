@@ -7,18 +7,25 @@ import { DesktopNav } from "@/components/layout/Navbar/DesktopNav";
 import { MobileNav } from "@/components/layout/Navbar/MobileNav";
 import { Logo } from "@/components/layout/Logo";
 import { Container } from "@/components/ui/Container";
-import { useScrolled } from "@/hooks/useScrolled";
+import { useScrollDirection } from "@/hooks/useScrollDirection";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
-  const scrolled = useScrolled(12);
+  const { scrolled, hidden } = useScrollDirection(24);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  // Keep navbar visible while the mobile drawer is open.
+  const navHidden = hidden && !mobileOpen;
 
   return (
     <>
       <header
         className={cn(
-          "z-sticky sticky top-0 w-full transition-all duration-300",
+          "z-sticky sticky top-0 w-full transition-all duration-300 ease-out",
+          "will-change-transform",
+          navHidden
+            ? "pointer-events-none -translate-y-full opacity-0"
+            : "translate-y-0 opacity-100",
           scrolled
             ? "border-b border-border/80 bg-surface/95 shadow-sm backdrop-blur-md"
             : "border-b border-transparent bg-transparent",

@@ -50,7 +50,6 @@ export type {
 export { homepageContent } from "./homepage";
 export type {
   ArticlePreview,
-  DoctorPreview,
   FeatureItem,
   GalleryItem,
   OpeningHour,

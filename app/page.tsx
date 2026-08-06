@@ -4,7 +4,6 @@ import {
   ClinicLocation,
   GalleryPreview,
   HeroSection,
-  MedicalTeamPreview,
   ServicesPreview,
   Testimonials,
   WhyChooseUs,
@@ -16,7 +15,6 @@ export default function HomePage() {
       <HeroSection />
       <ServicesPreview />
       <WhyChooseUs />
-      <MedicalTeamPreview />
       <GalleryPreview />
       <Testimonials />
       <ArticlesPreview />
