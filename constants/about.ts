@@ -238,13 +238,13 @@ export const aboutContent = {
       {
         id: "staff",
         label: "Professional Staff",
-        value: 8,
+        value: 2,
         suffix: "+",
       },
       {
         id: "patients",
         label: "Happy Patients",
-        value: 1000,
+        value: 300,
         suffix: "+",
       },
       {
