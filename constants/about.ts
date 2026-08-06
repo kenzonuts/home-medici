@@ -33,6 +33,7 @@ export type FacilityItem = {
   id: string;
   name: string;
   description: string;
+  imageSrc?: string;
 };
 
 export type StatItem = {
@@ -178,30 +179,48 @@ export const aboutContent = {
     eyebrow: "Fasilitas",
     title: "Fasilitas Klinik",
     description:
-      "Ruang dan peralatan yang mendukung pengalaman perawatan yang lebih nyaman.",
+      "Cuplikan ruang dan fasilitas klinik yang mendukung kenyamanan pasien serta keluarga.",
     items: [
       {
         id: "waiting",
-        name: "Comfortable Waiting Room",
+        name: "Ruang tunggu",
         description:
           "Area tunggu yang bersih dan nyaman untuk pasien serta keluarga.",
+        imageSrc: "/images/ruang tunggu .jpeg",
       },
       {
         id: "treatment",
-        name: "Sterile Treatment Room",
+        name: "Ruang tindakan",
         description: "Ruang tindakan dengan standar kebersihan yang terjaga.",
+        imageSrc: "/images/ruang sunat.png",
       },
       {
-        id: "equipment",
-        name: "Modern Equipment",
+        id: "consult",
+        name: "Area konsultasi",
         description:
-          "Peralatan pendukung prosedur dengan pendekatan medis modern.",
+          "Ruang konsultasi untuk penjelasan layanan dan pendampingan keluarga.",
+        imageSrc: "/images/konsultasi.png",
       },
       {
-        id: "child",
-        name: "Child Friendly Area",
+        id: "facility",
+        name: "Fasilitas klinik",
         description:
-          "Suasana yang ramah anak untuk membantu proses yang lebih tenang.",
+          "Fasilitas pendukung agar kunjungan terasa lebih tenang dan terarah.",
+        imageSrc: "/images/foto awal.png",
+      },
+      {
+        id: "front",
+        name: "Tampilan klinik",
+        description:
+          "Tampilan depan klinik yang mudah dikenali saat pasien berkunjung.",
+        imageSrc: "/images/tampilan depan klinik.jpeg",
+      },
+      {
+        id: "parking",
+        name: "Ruang tunggu & parkir",
+        description:
+          "Area tunggu dan parkir yang memudahkan akses pasien serta keluarga.",
+        imageSrc: "/images/ruang tunggu dan parkir.png",
       },
     ] satisfies FacilityItem[],
   },

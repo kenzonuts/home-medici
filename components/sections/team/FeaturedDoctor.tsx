@@ -65,7 +65,7 @@ export function FeaturedDoctor() {
                     {featuredDoctor.yearsExperience}
                   </p>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Placeholder pengalaman
+                    Pendampingan pasien & keluarga
                   </p>
                 </div>
                 <div className="rounded-lg border border-border bg-surface p-4">

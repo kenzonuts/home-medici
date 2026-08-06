@@ -20,7 +20,7 @@ type MotionDivProps = HTMLMotionProps<"div"> & {
   children?: ReactNode;
 };
 
-const viewport = { once: true, amount: 0.05, margin: "0px 0px -80px 0px" } as const;
+const viewport = { once: true, amount: 0.15 } as const;
 
 function createMotion(variants: (typeof motionPresets)[MotionPresetName]) {
   return function MotionPreset({

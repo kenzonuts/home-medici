@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import {
   ExpertiseAreas,
   FeaturedDoctor,
-  MedicalTeamGrid,
   Qualifications,
   TeamAppointmentCta,
   TeamIntroduction,
@@ -31,7 +30,6 @@ export default function MedicalTeamPage() {
       />
       <TeamIntroduction />
       <FeaturedDoctor />
-      <MedicalTeamGrid />
       <Qualifications />
       <ExpertiseAreas />
       <WhyChooseMedicalTeam />

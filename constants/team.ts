@@ -2,20 +2,6 @@ import type { BreadcrumbItem } from "@/constants/services";
 
 export type TeamBreadcrumb = BreadcrumbItem;
 
-export type TeamDoctor = {
-  id: string;
-  name: string;
-  position: string;
-  bio: string;
-  expertise: readonly string[];
-  specialtyTags: readonly string[];
-  schedule: string;
-  imageLabel: string;
-  imageSrc?: string;
-  ctaLabel: string;
-  ctaMessage: string;
-};
-
 export type QualificationItem = {
   id: string;
   title: string;
@@ -62,75 +48,27 @@ export const teamContent = {
     title: "Pendampingan medis yang tenang dan terpercaya",
     description:
       "Tim kami membantu pasien dan keluarga memahami setiap tahap layanan, mulai dari konsultasi, persiapan tindakan, hingga panduan pemulihan.",
-    body: "Setiap profil di halaman ini disiapkan sebagai placeholder agar data dokter, jadwal, dan kualifikasi dapat diintegrasikan dengan mudah pada tahap berikutnya.",
-    imageLabel: "Ilustrasi tim medis",
+    body: "Dengan pendekatan ramah dan profesional, tim medis Rumah Sunat Modern Jati siap mendampingi setiap usia pasien agar prosedur berlangsung lebih aman dan nyaman.",
+    imageLabel: "Tim medis Rumah Sunat Modern Jati",
+    imageSrc: "/images/hero-klinik.png",
   },
   featuredDoctor: {
-    eyebrow: "Dokter Utama",
-    name: "Dr. Dokter 1",
-    position: "Dokter Umum",
-    bio: "Dokter berpengalaman yang telah menangani ribuan kasus sunat dengan pendekatan yang ramah, profesional, dan mengutamakan kenyamanan pasien serta keluarga.",
+    eyebrow: "Tim Medis",
+    name: "Tim Medis Rumah Sunat Modern Jati",
+    position: "Dokter & Tenaga Kesehatan",
+    bio: "Tim medis kami berpengalaman dalam layanan sunat modern dengan pendekatan yang ramah, profesional, dan mengutamakan kenyamanan pasien serta keluarga.",
     expertise: [
       "Sunat bayi dan anak",
       "Konsultasi pra-tindakan",
       "Pendampingan pemulihan",
       "Edukasi keluarga",
     ],
-    yearsExperience: "10+ Tahun Pengalaman",
-    imageLabel: "Foto Dr. Dokter 1",
-    imageSrc: "/images/dr 1.png",
+    yearsExperience: "Pengalaman klinis",
+    imageLabel: "Tim medis Rumah Sunat Modern Jati",
+    imageSrc: "/images/hero-klinik.png",
     ctaLabel: "Booking WhatsApp",
     ctaMessage:
-      "Halo Rumah Sunat Modern Jati, saya ingin booking konsultasi dengan Dr. Dokter 1.",
-  },
-  doctors: {
-    eyebrow: "Daftar Tim",
-    title: "Dokter dan Tenaga Kesehatan",
-    description:
-      "Kartu profil berikut dapat diperbarui dengan nama, jadwal praktik, dan spesialisasi resmi klinik.",
-    items: [
-      {
-        id: "doctor-1",
-        name: "Dr. Dokter 1",
-        position: "Dokter Umum",
-        bio: "Dokter berpengalaman yang fokus pada layanan sunat anak dengan pendekatan yang ramah dan profesional.",
-        expertise: ["Sunat Anak", "Konsultasi"],
-        specialtyTags: ["Anak", "Keluarga"],
-        schedule: "Senin - Sabtu, 08:00 - 16:00",
-        imageLabel: "Foto Dr. Dokter 1",
-        imageSrc: "/images/dr 1.png",
-        ctaLabel: "Booking",
-        ctaMessage:
-          "Halo Rumah Sunat Modern Jati, saya ingin booking dengan Dr. Dokter 1.",
-      },
-      {
-        id: "doctor-2",
-        name: "Dr. Dokter 2",
-        position: "Tenaga Medis",
-        bio: "Tenaga medis yang berpengalaman dalam pendampingan pasien dan edukasi perawatan luka pasca tindakan.",
-        expertise: ["Perawatan Luka", "Edukasi Pasien"],
-        specialtyTags: ["Pemulihan", "Edukasi"],
-        schedule: "Senin - Sabtu, 08:00 - 16:00",
-        imageLabel: "Foto Dr. Dokter 2",
-        imageSrc: "/images/dr 2.png",
-        ctaLabel: "Booking",
-        ctaMessage:
-          "Halo Rumah Sunat Modern Jati, saya ingin booking dengan Dr. Dokter 2.",
-      },
-      {
-        id: "doctor-3",
-        name: "Tenaga Medis",
-        position: "Konsultan Kesehatan",
-        bio: "Konsultan kesehatan yang siap membantu konsultasi awal dan memberikan rekomendasi layanan terbaik.",
-        expertise: ["Konsultasi", "Pemeriksaan Awal"],
-        specialtyTags: ["Konsultasi", "Skrining"],
-        schedule: "Senin - Sabtu, 08:00 - 16:00",
-        imageLabel: "Foto tenaga medis",
-        ctaLabel: "Booking",
-        ctaMessage:
-          "Halo Rumah Sunat Modern Jati, saya ingin booking konsultasi.",
-      },
-    ] satisfies TeamDoctor[],
+      "Halo Rumah Sunat Modern Jati, saya ingin booking konsultasi dengan tim medis.",
   },
   qualifications: {
     eyebrow: "Kualifikasi",

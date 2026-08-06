@@ -21,7 +21,7 @@ export function ClinicFacilities() {
         />
       </FadeUp>
 
-      <StaggerContainer className="grid gap-6 sm:grid-cols-2">
+      <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {facilities.items.map((item) => (
           <StaggerItem key={item.id}>
             <Card
@@ -31,6 +31,7 @@ export function ClinicFacilities() {
             >
               <ImagePlaceholder
                 label={item.name}
+                imageSrc={item.imageSrc}
                 aspect="wide"
                 className="rounded-none"
               />

@@ -9,41 +9,43 @@ const baseTransition: Transition = {
   ease: easeOut,
 };
 
-/** Fade in while rising from below. */
+/**
+ * Motion variants use transform only (no opacity:0).
+ * Opacity-hiding caused images/sections to stay invisible when
+ * whileInView failed to fire after hydration.
+ */
+
+/** Rise from below. */
 export const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { y: 20 },
   visible: {
-    opacity: 1,
     y: 0,
     transition: baseTransition,
   },
 };
 
-/** Fade in while descending from above. */
+/** Descend from above. */
 export const fadeDown: Variants = {
-  hidden: { opacity: 0, y: -24 },
+  hidden: { y: -20 },
   visible: {
-    opacity: 1,
     y: 0,
     transition: baseTransition,
   },
 };
 
-/** Fade in from the left. */
+/** Enter from the left. */
 export const fadeLeft: Variants = {
-  hidden: { opacity: 0, x: -24 },
+  hidden: { x: -20 },
   visible: {
-    opacity: 1,
     x: 0,
     transition: baseTransition,
   },
 };
 
-/** Fade in from the right. */
+/** Enter from the right. */
 export const fadeRight: Variants = {
-  hidden: { opacity: 0, x: 24 },
+  hidden: { x: 20 },
   visible: {
-    opacity: 1,
     x: 0,
     transition: baseTransition,
   },
@@ -51,9 +53,8 @@ export const fadeRight: Variants = {
 
 /** Soft scale-in entrance. */
 export const scale: Variants = {
-  hidden: { opacity: 0, scale: 0.92 },
+  hidden: { scale: 0.96 },
   visible: {
-    opacity: 1,
     scale: 1,
     transition: baseTransition,
   },
@@ -61,9 +62,8 @@ export const scale: Variants = {
 
 /** Slightly stronger zoom entrance. */
 export const zoom: Variants = {
-  hidden: { opacity: 0, scale: 0.8 },
+  hidden: { scale: 0.92 },
   visible: {
-    opacity: 1,
     scale: 1,
     transition: {
       ...baseTransition,
@@ -72,22 +72,21 @@ export const zoom: Variants = {
   },
 };
 
-/** Parent container that staggers children (no opacity hide — avoids stuck-invisible grids). */
+/** Parent container that staggers children. */
 export const staggerContainer: Variants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.08,
+      staggerChildren: 0.08,
+      delayChildren: 0.04,
     },
   },
 };
 
 /** Child item used with `staggerContainer`. */
 export const staggerItem: Variants = {
-  hidden: { opacity: 0, y: 16 },
+  hidden: { y: 14 },
   visible: {
-    opacity: 1,
     y: 0,
     transition: baseTransition,
   },
