@@ -72,14 +72,14 @@ export const aboutContent = {
     body: "Kami berfokus pada pengalaman yang tenang mulai dari konsultasi, prosedur, hingga pemulihan, dengan standar kebersihan dan komunikasi yang jelas.",
     ctaLabel: "Hubungi Kami",
     ctaHref: "/kontak",
-    imageLabel: "Foto klinik",
+    imageLabel: "Tampilan depan Rumah Sunat Modern Jati",
+    imageSrc: "/images/tentang-klinik.png",
   },
   story: {
     eyebrow: "Cerita Kami",
     title: "Perjalanan Klinik",
     description:
       "Ringkasan perjalanan kami dalam membangun layanan yang lebih aman dan nyaman.",
-    illustrationLabel: "Ilustrasi perjalanan klinik",
     milestones: [
       {
         id: "m-1",

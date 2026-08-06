@@ -1,4 +1,3 @@
-export { ArticlesPreview } from "./ArticlesPreview";
 export { BookingSection } from "./BookingSection";
 export { ClinicLocation } from "./ClinicLocation";
 export { GalleryPreview } from "./GalleryPreview";

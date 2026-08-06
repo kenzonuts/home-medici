@@ -193,11 +193,6 @@ export function GalleryCard({
   );
 }
 
-/** Base shell for article / news cards. */
-export function ArticleCard({ className, ...props }: CardBaseProps) {
-  return <CardBase interactive className={cn("group", className)} {...props} />;
-}
-
 /** Base shell for testimonial cards. */
 export function TestimonialCard({ className, ...props }: CardBaseProps) {
   return (

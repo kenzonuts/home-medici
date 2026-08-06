@@ -25,14 +25,6 @@ export type TestimonialItem = {
   review: string;
 };
 
-export type ArticlePreview = {
-  id: string;
-  title: string;
-  category: string;
-  publishedAt: string;
-  href: string;
-};
-
 export type OpeningHour = {
   days: string;
   hours: string;
@@ -203,37 +195,6 @@ export const homepageContent = {
         review: "Pengalaman yang menenangkan dari konsultasi hingga pemulihan.",
       },
     ] satisfies TestimonialItem[],
-  },
-  articles: {
-    eyebrow: "Artikel",
-    title: "Artikel Kesehatan",
-    description:
-      "Informasi ringkas seputar persiapan, perawatan, dan pemulihan.",
-    ctaLabel: "Lihat Semua Artikel",
-    ctaHref: "/articles",
-    items: [
-      {
-        id: "a-1",
-        title: "Persiapan Sebelum Sunat",
-        category: "Edukasi",
-        publishedAt: "2026-01-15",
-        href: "/articles/panduan-placeholder-sunat-modern",
-      },
-      {
-        id: "a-2",
-        title: "Perawatan Setelah Prosedur",
-        category: "Perawatan",
-        publishedAt: "2026-02-02",
-        href: "/articles/tips-placeholder-perawatan-di-rumah",
-      },
-      {
-        id: "a-3",
-        title: "Tips Menjaga Kenyamanan Anak",
-        category: "Tips",
-        publishedAt: "2026-03-10",
-        href: "/articles/tips-placeholder-kunjungan-anak",
-      },
-    ] satisfies ArticlePreview[],
   },
   booking: {
     headline: "Siap Booking Perawatan?",

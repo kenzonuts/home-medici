@@ -13,7 +13,6 @@ export const mainNavigation: NavItem[] = [
   { label: "Layanan", href: "/layanan" },
   { label: "Tim Medis", href: "/tim-medis" },
   { label: "Galeri", href: "/galeri" },
-  { label: "Artikel", href: "/articles" },
   { label: "Kontak", href: "/kontak" },
 ];
 

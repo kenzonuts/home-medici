@@ -18,6 +18,7 @@ export function ClinicIntroduction() {
         <FadeLeft>
           <ImagePlaceholder
             label={introduction.imageLabel}
+            imageSrc={introduction.imageSrc}
             aspect="wide"
             className="rounded-2xl border border-border shadow-md"
           />

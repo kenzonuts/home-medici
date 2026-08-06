@@ -1,5 +1,4 @@
 import {
-  ArticlesPreview,
   BookingSection,
   ClinicLocation,
   GalleryPreview,
@@ -17,7 +16,6 @@ export default function HomePage() {
       <WhyChooseUs />
       <GalleryPreview />
       <Testimonials />
-      <ArticlesPreview />
       <BookingSection />
       <ClinicLocation />
     </>
