@@ -51,14 +51,22 @@ export type OpeningHour = {
  */
 export const homepageContent = {
   hero: {
-    headline: "Perawatan Sunat Modern yang Aman dan Nyaman",
+    badge: "Klinik Sunat Modern & Hipnotis Terpercaya",
+    headlinePrefix: "Sunat Modern yang",
+    headlineHighlight: "Aman, Nyaman & Profesional",
     description:
-      "Klinik sunat dengan pendekatan medis modern, pelayanan ramah, dan kenyamanan untuk setiap usia.",
-    primaryCta: "Booking via WhatsApp",
-    secondaryCta: "Lihat Layanan",
+      "Perawatan sunat dengan metode modern, tenaga medis profesional, dan pelayanan ramah untuk bayi, anak, hingga dewasa.",
+    primaryCta: "Daftar Sunat Sekarang",
+    secondaryCta: "Konsultasi Kesehatan",
     secondaryHref: "/layanan",
-    imageLabel: "Rumah Sunat Modern Jati",
-    imageSrc: "/images/foto awal.png",
+    imageLabel: "Tim medis Rumah Sunat Modern Jati",
+    imageSrc: "/images/hero-klinik.png",
+    highlights: [
+      { id: "aman", label: "Aman & Nyaman", icon: "comfort" as const },
+      { id: "modern", label: "Metode Modern", icon: "modern" as const },
+      { id: "profesional", label: "Tenaga Profesional", icon: "doctor" as const },
+      { id: "cepat", label: "Pelayanan Cepat", icon: "fast" as const },
+    ],
   },
   services: {
     eyebrow: "Layanan",
