@@ -22,7 +22,7 @@ export function HeroSection() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative overflow-x-hidden"
+      className="relative z-0 overflow-x-hidden isolate"
     >
       {/* Atmosphere */}
       <div

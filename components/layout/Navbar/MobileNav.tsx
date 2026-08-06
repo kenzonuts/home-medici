@@ -3,7 +3,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { MessageCircle, X } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useId, useRef } from "react";
+import { useEffect, useId, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 import { Logo } from "@/components/layout/Logo";
 import { NavLink } from "@/components/layout/Navbar/NavLink";
@@ -21,8 +22,13 @@ export type MobileNavProps = {
 export function MobileNav({ open, onClose }: MobileNavProps) {
   const titleId = useId();
   const closeRef = useRef<HTMLButtonElement>(null);
+  const [mounted, setMounted] = useState(false);
 
   useBodyScrollLock(open);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -37,7 +43,9 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open, onClose]);
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {open ? (
         <>
@@ -118,6 +126,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
           </motion.aside>
         </>
       ) : null}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   );
 }
